@@ -53,18 +53,17 @@ body {
 
 .profile-info h1 {
     font-size: 2em;
+}
+
+.role {
+    font-size: 0.9em;
+    color: #999;
     margin-bottom: 10px;
 }
 
 .subtitle {
     font-size: 1.2em;
     color: #ccc;
-    margin-bottom: 5px;
-}
-
-.role {
-    font-size: 0.9em;
-    color: #999;
 }
 
 /* main */
@@ -113,6 +112,6 @@ body {
 }
 
 .recommendation a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
