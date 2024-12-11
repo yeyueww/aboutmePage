@@ -12,18 +12,109 @@ li {
     box-sizing: border-box;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #000000;
+        --text-color: #ffffff;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        --bg-color: #ffffe6;
+        --text-color: #000000;
+    }
+}
+
+/* EX-Small */
+@media only screen and (max-width: 600px){
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .profile {
+        flex-direction: column; /* 將內容改為垂直排列 */
+        align-items: center;
+    }
+
+    .profile-pic {
+        width: 80px; /* 縮小圖片大小 */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.2rem; /* 縮小標題文字 */
+    }
+
+    .profile-info p {
+        font-size: 0.9rem; /* 縮小副標題文字 */
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about h2 {
+        margin-left: 20vw;
+    }
+    .about h3 {
+        margin-left: 25vw;
+    }
+    .about ul {
+        margin-left: 25vw;
+    }
+}
+
+/* Small */
+@media only screen and (min-width: 600px){
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 0fr 1fr;
+        gap: 20px;
+    }
+}
+/* Medium */
+@media only screen and (min-width: 768px){
+
+}
+
+/* Large */
+@media only screen and (min-width: 992px){
+}
+
+/* EX-Large */
+@media only screen and (min-width: 1200px){
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
 /* Universal */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #000;
-    color: #fff;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -53,6 +144,7 @@ body {
 
 .profile-info h1 {
     font-size: 2em;
+    margin-bottom: 0;
 }
 
 .role {
@@ -68,9 +160,7 @@ body {
 
 /* main */
 .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+
 }
 
 /* left side */
