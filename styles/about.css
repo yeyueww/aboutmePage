@@ -1,0 +1,259 @@
+/* Reset style */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #000000;
+        --text-color: #ffffff;
+        --border-color: #ffffff;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        --bg-color: #ffffe6;
+        --text-color: #000000;
+        --border-color: #000000;
+    }
+}
+
+/* EX-Small */
+@media only screen and (max-width: 600px){
+    header {
+        margin-top: 50px;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+
+    /* head */
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile-info h1 {
+        font-size: 1.6rem;
+    }
+
+    .role {
+        font-size: 0.7rem;
+        margin-top: -8px;
+    }
+
+    /* main */
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .about h2 {
+        display: flex;
+        justify-content: center;
+    }
+    .about h3 {
+        margin-left: 20vw;
+    }
+    .about ul {
+        margin-left: 20vw;
+    }
+
+    .recommendation h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .recommendations {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .recommendations a {
+        display: flex;
+        justify-content: center;
+        line-height: 1rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Small */
+@media only screen and (min-width: 600px){
+    .profile-info h1 {
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+
+    .role {
+        font-size: 0.9em;
+        color: #999;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 0fr 2fr;
+        gap: 20px;
+    }
+
+    .recommendation {
+        grid-column: 3 / 4;
+        text-align: center;
+        /*display: inline-flex;*/
+    }
+
+    .recommendations {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+/* Medium */
+@media only screen and (min-width: 768px){
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 0fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* Large */
+@media only screen and (min-width: 992px){
+}
+
+/* EX-Large */
+@media only screen and (min-width: 1200px){
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+
+/* Universal */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* head */
+.profile {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    margin-bottom: 10px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.role {
+    color: #999;
+}
+
+
+.subtitle {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+nav {
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+nav a:hover {
+    box-shadow: 0 2px 5px pink;
+    background-color: pink;
+}
+
+nav a:visited {
+    color: var(--text-color);
+}
+
+/* left side */
+.about {
+    grid-column: 1 / 2;
+}
+
+.about h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #008b8b;
+}
+
+.about ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.about li {
+    margin-bottom: 5px;
+}
+
+/* right side */
+.recommendation h2 {
+    color: #008b8b;
+    margin-bottom: 10px;
+}
+
+.recommendation-img {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.recommendation a {
+    color: var(--text-color);
+    text-decoration: none;
+}
