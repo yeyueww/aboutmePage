@@ -28,31 +28,29 @@ li {
 
 /* EX-Small */
 @media only screen and (max-width: 600px){
+    header {
+        margin-top: 50px;
+    }
+
     .container {
         max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
     }
 
+    /* head */
     .profile {
-        flex-direction: column; /* 將內容改為垂直排列 */
-        align-items: center;
-    }
-
-    .profile-pic {
-        width: 80px; /* 縮小圖片大小 */
-        height: auto;
-        margin-bottom: 10px;
+        flex-direction: column;
     }
 
     .profile-info h1 {
-        font-size: 1.2rem; /* 縮小標題文字 */
+        font-size: 1.6rem;
     }
 
-    .profile-info p {
-        font-size: 0.9rem; /* 縮小副標題文字 */
+    .role {
+        font-size: 0.7rem;
+        margin-top: -8px;
     }
 
+    /* main */
     .content {
         display: flex;
         flex-direction: column;
@@ -62,30 +60,77 @@ li {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-bottom: 2rem;
     }
 
     .about h2 {
-        margin-left: 20vw;
+        display: flex;
+        justify-content: center;
     }
     .about h3 {
-        margin-left: 25vw;
+        margin-left: 20vw;
     }
     .about ul {
-        margin-left: 25vw;
+        margin-left: 20vw;
+    }
+
+    .recommendation h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .recommendations {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .recommendations a {
+        display: flex;
+        justify-content: center;
+        line-height: 1rem;
+        margin-bottom: 20px;
     }
 }
 
 /* Small */
 @media only screen and (min-width: 600px){
+    .profile-info h1 {
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+
+    .role {
+        font-size: 0.9em;
+        color: #999;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 0fr 2fr;
+        gap: 20px;
+    }
+
+    .recommendation {
+        grid-column: 3 / 4;
+        text-align: center;
+        /*display: inline-flex;*/
+    }
+
+    .recommendations {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+/* Medium */
+@media only screen and (min-width: 768px){
     .content {
         display: grid;
         grid-template-columns: 1fr 0fr 1fr;
         gap: 20px;
     }
-}
-/* Medium */
-@media only screen and (min-width: 768px){
-
 }
 
 /* Large */
@@ -101,17 +146,14 @@ li {
     }
 }
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
 /* Universal */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .container {
@@ -134,6 +176,7 @@ body {
     object-fit: cover;
     margin-right: 20px;
     border: 2px solid #fff;
+    margin-bottom: 10px;
 }
 
 .profile-info {
@@ -142,26 +185,18 @@ body {
     justify-content: center;
 }
 
-.profile-info h1 {
-    font-size: 2em;
-    margin-bottom: 0;
-}
 
 .role {
-    font-size: 0.9em;
     color: #999;
-    margin-bottom: 10px;
 }
+
 
 .subtitle {
     font-size: 1.2em;
     color: #ccc;
 }
 
-/* main */
-.content {
 
-}
 
 /* left side */
 .about {
@@ -184,15 +219,9 @@ body {
 }
 
 /* right side */
-.recommendation {
-    grid-column: 3 / 4;
-    text-align: center;
-    /*display: inline-flex;*/
-}
-
-.recommendations {
-    display: flex;
-    justify-content: space-evenly;
+.recommendation h2 {
+    color: #008b8b;
+    margin-bottom: 10px;
 }
 
 .recommendation-img {
@@ -202,6 +231,6 @@ body {
 }
 
 .recommendation a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
 }
